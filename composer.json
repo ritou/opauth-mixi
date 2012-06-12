@@ -1,0 +1,23 @@
+{
+	"name": "opauth/mixi",
+	"description": "Mixi strategy for Opauth",
+	"keywords": ["authentication","auth","mixi"],
+	"homepage": "http://opauth.org",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Ryo Ito",
+			"email": "ritou.06@gmail.com",
+			"homepage": "http://d.hatena.ne.jp/ritou/"
+		}
+	],
+	"require": {
+		"php": ">=5.2.0",
+		"opauth/opauth": ">=0.2.0"
+	},
+	"autoload": {
+		"psr-0": {
+			"": "."
+		}
+	}
+}
