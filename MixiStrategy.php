@@ -5,7 +5,7 @@
  * 
  * More information on Opauth: http://opauth.org
  * 
- * @copyright    Copyright © 2012 Ryo Ito (http://d.hatena.ne.jp/ritou/)
+ * @copyright    Copyright © 2012 Ryo Ito (https://github.com/ritou)
  * @link         http://opauth.org
  * @package      Opauth.MixiStrategy
  * @license      MIT License
@@ -127,7 +127,7 @@ class MixiStrategy extends OpauthStrategy{
 	 * @return array Parsed JSON results
 	 */
 	private function userinfo($access_token){
-		$userinfo = $this->serverGet('https://api.mixi-platform.com/2/people/@me/@self', array('oauth_token' => $access_token), null, $headers);
+		$userinfo = $this->serverGet('https://api.mixi-platform.com/2/people/@me/@self', array('access_token' => $access_token), null, $headers);
 		if (!empty($userinfo)){
 			return json_decode($userinfo);
 		}

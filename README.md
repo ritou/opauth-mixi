@@ -49,6 +49,6 @@ References
 License
 ---------
 Opauth-mixi is MIT Licensed  
-Copyright © 2012 Ryo Ito (http://d.hatena.ne.jp/ritou)
+Copyright © 2012 Ryo Ito (https://github.com/ritou)
 
 [1]: https://github.com/uzyn/opauth
