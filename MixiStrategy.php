@@ -73,7 +73,7 @@ class MixiStrategy extends OpauthStrategy{
 			);
 			$response = $this->serverPost($url, $params, null, $headers);
 			
-			$results = json_decode($response);error_log($result);
+			$results = json_decode($response);
 			
 			if (!empty($results) && !empty($results->access_token)){
 				$userinfo = $this->userinfo($results->access_token);
@@ -86,7 +86,9 @@ class MixiStrategy extends OpauthStrategy{
 					),
 					'credentials' => array(
 						'token' => $results->access_token,
-						'expires' => date('c', time() + $results->expires_in)
+						'expires' => date('c', time() + $results->expires_in),
+						'refresh_token' => $results->refresh_token,
+						'scope' => $results->scope,
 					),
 					'raw' => $userinfo
 				);
