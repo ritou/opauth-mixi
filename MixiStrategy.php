@@ -86,7 +86,9 @@ class MixiStrategy extends OpauthStrategy{
 					),
 					'credentials' => array(
 						'token' => $results->access_token,
-						'expires' => date('c', time() + $results->expires_in)
+						'expires' => date('c', time() + $results->expires_in),
+						'refresh_token' => $results->refresh_token,
+						'scope' => $results->scope,
 					),
 					'raw' => $userinfo
 				);
